@@ -1,0 +1,1549 @@
+/* BatchDashboard.css */
+.batch-dashboard {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-in-out;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.dashboard-header h2 {
+  color: #1e293b;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.data-source-info {
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.source-label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.source-value {
+  color: #3b82f6;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* Dashboard Tabs */
+.dashboard-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: #f8fafc;
+  color: #64748b;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+}
+
+.tab-button:hover {
+  background: #e2e8f0;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.tab-button.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.section-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.section-card h3 {
+  color: #1e293b;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.section-card h4 {
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+/* Dataset Overview */
+.dataset-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3b82f6;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Risk Analysis */
+.risk-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.risk-metric {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #06b6d4;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Risk Distribution */
+.risk-distribution {
+  margin-top: 2rem;
+}
+
+.distribution-bars {
+  margin-top: 1rem;
+}
+
+.distribution-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+.risk-label-container {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.risk-category {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.customer-count {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.bar-container {
+  flex: 1;
+  background: #f1f5f9;
+  height: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.risk-bar {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.risk-bar.high-risk {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.risk-bar.medium-risk {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+}
+
+.risk-bar.low-risk {
+  background: linear-gradient(90deg, #34d399, #6ee7b7);
+}
+
+.bar-count {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.risk-percentage {
+  min-width: 60px;
+  text-align: right;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Feature Analysis */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feature-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.feature-name {
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.feature-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat .stat-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.stat .stat-value {
+  font-size: 1rem;
+  color: #3b82f6;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Charts Grid Layout */
+.charts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-container {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  height: 100%;
+}
+
+.chart-container h4 {
+  margin: 0 0 1rem 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Churn Rate Chart */
+.churn-rate-chart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.churn-rate-metric {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.churn-rate-value {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ef4444;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.churn-rate-label {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.churn-breakdown {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.churn-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  min-width: 120px;
+}
+
+.churn-item.retained {
+  background: rgba(52, 211, 153, 0.1);
+  border: 2px solid #34d399;
+}
+
+.churn-item.churned {
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid #ef4444;
+}
+
+.churn-count {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.churn-item.retained .churn-count {
+  color: #34d399;
+}
+
+.churn-item.churned .churn-count {
+  color: #ef4444;
+}
+
+.churn-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.churn-percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.churn-gauge {
+  width: 100%;
+  max-width: 300px;
+}
+
+.gauge-track {
+  width: 100%;
+  height: 20px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.gauge-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #34d399, #fbbf24, #ef4444);
+  border-radius: 10px;
+  transition: width 0.8s ease;
+}
+
+.gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Donut Chart Styles */
+.donut-chart-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.donut-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.donut-chart {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-segment {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    transparent 0deg calc(var(--percentage) * 3.6deg),
+    rgba(0, 0, 0, 0.1) calc(var(--percentage) * 3.6deg) 360deg
+  );
+}
+
+.male-donut .donut-segment {
+  background: conic-gradient(
+    #3b82f6 0deg calc(var(--percentage) * 3.6deg),
+    rgba(59, 130, 246, 0.2) calc(var(--percentage) * 3.6deg) 360deg
+  );
+}
+
+.female-donut .donut-segment {
+  background: conic-gradient(
+    #ec4899 0deg calc(var(--percentage) * 3.6deg),
+    rgba(236, 72, 153, 0.2) calc(var(--percentage) * 3.6deg) 360deg
+  );
+}
+
+.donut-hole {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.donut-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+}
+
+.donut-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.male-donut .donut-value {
+  color: #3b82f6;
+}
+
+.female-donut .donut-value {
+  color: #ec4899;
+}
+
+.donut-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.donut-details {
+  text-align: center;
+}
+
+.detail-count {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.detail-percentage {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Histogram Chart - Tenure */
+.histogram-chart {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  height: 200px;
+}
+
+.histogram-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.histogram-fill {
+  width: 80%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.8s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  min-height: 30px;
+}
+
+.histogram-fill.tenure-bucket {
+  background: linear-gradient(to top, #10b981, #34d399);
+}
+
+.histogram-value {
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  margin-bottom: 0.25rem;
+}
+
+.histogram-label {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: center;
+}
+
+/* Vertical Bar Chart - City Tier */
+.vertical-bar-chart {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem 0;
+  height: 200px;
+}
+
+.vertical-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar-count {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.vertical-fill {
+  width: 60%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.8s ease;
+  min-height: 20px;
+}
+
+.vertical-fill.city-tier {
+  background: linear-gradient(to top, #f59e0b, #fbbf24);
+}
+
+.vertical-label {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.percentage {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Stacked Bar Chart - Marital Status */
+.stacked-bar-chart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.stacked-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 40px;
+}
+
+.stacked-label {
+  min-width: 80px;
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.stacked-track {
+  flex: 1;
+  height: 30px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+}
+
+.stacked-segment {
+  height: 100%;
+  transition: width 0.8s ease;
+  position: relative;
+  min-width: 20px;
+}
+
+.stacked-segment.low-risk {
+  background: #34d399;
+}
+
+.stacked-segment.medium-risk {
+  background: #fbbf24;
+}
+
+.stacked-segment.high-risk {
+  background: #ef4444;
+}
+
+.stacked-total {
+  min-width: 40px;
+  text-align: right;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.stacked-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-color.low-risk {
+  background: #34d399;
+}
+
+.legend-color.medium-risk {
+  background: #fbbf24;
+}
+
+.legend-color.high-risk {
+  background: #ef4444;
+}
+
+/* Satisfaction Chart */
+.satisfaction-chart {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  height: 200px;
+}
+
+.satisfaction-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.satisfaction-bar .bar-count {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.satisfaction-fill {
+  width: 80%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.8s ease;
+  min-height: 20px;
+  background: linear-gradient(to top, #8b5cf6, #a78bfa);
+}
+
+.satisfaction-label {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  text-align: center;
+}
+
+/* All Predictions Section */
+.predictions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.predictions-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.items-per-page-select {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.pagination-info {
+  color: #64748b;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #374151;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #3b82f6;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #64748b;
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+/* Table Container */
+.predictions-table-container {
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.predictions-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.predictions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.predictions-table th {
+  background: #3b82f6;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.predictions-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.predictions-table tr:hover {
+  background: #f8fafc;
+}
+
+/* Customer ID */
+.customer-id {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+/* Probability Bar */
+.probability-bar {
+  width: 100px;
+  height: 24px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.probability-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  border-radius: 12px;
+  transition: width 0.3s ease;
+}
+
+.probability-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Risk Badges */
+.risk-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+.risk-badge.high-risk {
+  background: #ef4444;
+  color: white;
+}
+
+.risk-badge.moderate-risk {
+  background: #f97316;
+  color: white;
+}
+
+.risk-badge.low-risk {
+  background: #34d399;
+  color: white;
+}
+
+/* Prediction Labels */
+.prediction {
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+.prediction.churn {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.prediction.no-churn {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+}
+
+/* Satisfaction Score */
+.satisfaction-score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.score-stars {
+  color: #fbbf24;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Download Section - Single Column Layout */
+.download-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 1px solid #e2e8f0;
+}
+
+.download-main-section {
+  margin-bottom: 2rem;
+}
+
+.download-option-full {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.download-option-full h4 {
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.download-option-full p {
+  color: #64748b;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.download-note-small {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* Risk Categories Section - Under Complete Report */
+.risk-categories-section {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.risk-categories-section h4 {
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.risk-categories-section > p {
+  color: #64748b;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+}
+
+.risk-cards-horizontal {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.risk-card-horizontal {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-height: 180px;
+  justify-content: space-between;
+}
+
+.risk-card-horizontal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.risk-card-horizontal.high-risk {
+  border-top: 4px solid #ef4444;
+}
+
+.risk-card-horizontal.medium-risk {
+  border-top: 4px solid #f97316;
+}
+
+.risk-card-horizontal.low-risk {
+  border-top: 4px solid #34d399;
+}
+
+.risk-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.risk-card-header .risk-icon {
+  font-size: 2rem;
+}
+
+.risk-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.risk-card-header h5 {
+  color: #1e293b;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.customer-count-badge {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.risk-card-horizontal.high-risk .customer-count-badge {
+  color: #ef4444;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.risk-card-horizontal.medium-risk .customer-count-badge {
+  color: #f97316;
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.risk-card-horizontal.low-risk .customer-count-badge {
+  color: #34d399;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+/* Compact Download Buttons */
+.download-btn.compact {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.download-btn.compact.high-risk-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.download-btn.compact.high-risk-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.download-btn.compact.medium-risk-btn {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+}
+
+.download-btn.compact.medium-risk-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.download-btn.compact.low-risk-btn {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  color: white;
+}
+
+.download-btn.compact.low-risk-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #10b981, #059669);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
+}
+
+.download-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Download Buttons */
+.download-btn.primary {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  color: white;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.download-btn.primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* No Data Message */
+.no-data-message {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #64748b;
+}
+
+.no-data-message h3 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+/* Small spinner for buttons */
+.spinner-small {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .chart-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .risk-cards-horizontal {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .churn-breakdown {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .donut-chart-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .batch-dashboard {
+    padding: 1rem;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .dashboard-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+  }
+  
+  .dataset-stats-grid,
+  .risk-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .distribution-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .risk-label-container {
+    min-width: auto;
+    text-align: center;
+  }
+  
+  .risk-percentage {
+    text-align: center;
+  }
+  
+  .predictions-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .predictions-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-box {
+    min-width: auto;
+  }
+  
+  .pagination-controls {
+    justify-content: space-between;
+  }
+  
+  .predictions-table-container {
+    max-height: 400px;
+  }
+  
+  .predictions-table {
+    font-size: 0.8rem;
+  }
+  
+  .predictions-table th,
+  .predictions-table td {
+    padding: 0.5rem;
+  }
+  
+  .pie-chart-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .churn-rate-value {
+    font-size: 2.5rem;
+  }
+  
+  .donut-chart-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .donut-chart {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .donut-value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-card {
+    padding: 1rem;
+  }
+  
+  .stat-card,
+  .risk-metric {
+    padding: 1rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+  }
+  
+  .download-option-full,
+  .risk-categories-section {
+    padding: 1rem;
+  }
+  
+  .risk-card-horizontal {
+    padding: 1rem;
+    min-height: 160px;
+  }
+  
+  .risk-card-header .risk-icon {
+    font-size: 1.5rem;
+  }
+  
+  .risk-card-header h5 {
+    font-size: 0.9rem;
+  }
+  
+  .customer-count-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  /* Mobile optimizations for risk distribution */
+  .distribution-item {
+    margin-bottom: 1rem;
+  }
+  
+  .bar-container {
+    height: 30px;
+  }
+  
+  .bar-count {
+    font-size: 0.8rem;
+  }
+  
+  .risk-percentage {
+    font-size: 0.9rem;
+  }
+  
+  .churn-rate-value {
+    font-size: 2rem;
+  }
+  
+  .donut-chart {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .donut-value {
+    font-size: 0.9rem;
+  }
+  
+  .donut-label {
+    font-size: 0.7rem;
+  }
+  
+  .detail-count {
+    font-size: 0.9rem;
+  }
+  
+  .detail-percentage {
+    font-size: 0.7rem;
+  }
+}
+
+/* Additional responsive styles for risk distribution */
+@media (max-width: 1024px) {
+  .distribution-item {
+    gap: 1rem;
+  }
+  
+  .risk-label-container {
+    min-width: 160px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .batch-dashboard {
+    padding: 0;
+    background: white;
+  }
+  
+  .section-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+  
+  .download-section,
+  .header-actions {
+    display: none;
+  }
+}
