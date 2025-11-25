@@ -43,6 +43,7 @@ The API runs at:
 http://localhost:5000
 
 🖥️ Frontend Setup (React)
+
 1️⃣ Install Node Modules
 cd frontend
 npm install
