@@ -20,6 +20,7 @@ Features:
 
 
 ⚙️ Backend Setup (Flask API)
+
 1️⃣ Create & Activate Virtual Environment
 cd backend
 python -m venv venv
