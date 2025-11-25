@@ -16,7 +16,11 @@ Health Check: Dedicated endpoint for API and model status verification.
 
 
 
-
+Component,Technology,Description
+Frontend,React.js,User interface and data visualization.
+Backend,Flask (Python),"RESTful API server, data processing, and business logic."
+ML Model,Ensemble,"Combination of Random Forest, XGBoost, and CatBoost for high-accuracy predictions."
+Data Handling,"Pandas, NumPy",Data manipulation and cleaning within the Flask API.
 
 
 
