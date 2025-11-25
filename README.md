@@ -180,6 +180,7 @@ BUILD COMMAND: npm run build
 OUTPUT: build
 
 📊 How to Test API (Postman)
+
 1️⃣ Single prediction
 
 POST →
