@@ -18,15 +18,6 @@ Features:
 ✔ Business impact analysis
 ✔ Feature importance approximation
 
-🚀 Project Structure
-project/
- ├── frontend/      # React UI
- ├── backend/
- │    ├── app.py    # Flask API (uploaded)
- │    ├── Artifacts/# ML model + feature files
- │    ├── requirements.txt
- │    └── E_Commerce_Dataset1.csv
- └── README.md
 
 ⚙️ Backend Setup (Flask API)
 1️⃣ Create & Activate Virtual Environment
