@@ -164,42 +164,8 @@ Without them → API will show:
 
 Model not loaded (503 error)
 
-🌐 Deployment Guide
-✔ Deploy React Frontend → Vercel
-
-Push your frontend folder to GitHub
-
-Go to Vercel → “New Project” → select repository
-
-Set:
-
 BUILD COMMAND: npm run build
 OUTPUT: build
-
-
-Add environment variable:
-
-REACT_APP_API_BASE = https://your-backend-url
-
-✔ Deploy Flask Backend → Render
-
-Create new web service
-
-Select backend folder
-
-Set:
-
-Build Command: pip install -r requirements.txt
-Start Command: gunicorn app:app
-
-
-Add environment variables if needed
-
-Deploy
-
-📝 Sample .env for Flask (Optional)
-FLASK_ENV=production
-PORT=5000
 
 📊 How to Test API (Postman)
 1️⃣ Single prediction
