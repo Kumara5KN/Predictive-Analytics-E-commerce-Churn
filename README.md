@@ -183,8 +183,6 @@ OUTPUT: build
 
 1️⃣ Single prediction
 
-POST →
-http://localhost:5000/api/predict
 
 Body (JSON):
 
