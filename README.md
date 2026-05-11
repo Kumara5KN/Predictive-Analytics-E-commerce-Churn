@@ -304,11 +304,5 @@ file: customers.csv
 
 ---
 
-# 👨‍💻 Author
-
-## Kumara N
-
-MCA – Presidency University, Bangalore  
-Aspiring Data Scientist & Full Stack Developer
 
 
