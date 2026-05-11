@@ -40,11 +40,11 @@ Among all tested models, **Random Forest achieved the highest accuracy of 94.38%
 
 ## Churn Distribution
 
-![Churn Distribution](images/churn_distribution.png)
+![Churn Distribution](assets/churn_distribution.png)
 
 ## Feature-wise Churn Analysis
 
-![Feature Analysis](images/feature_analysis.png)
+![Feature Analysis](assets/feature_analysis.png)
 
 ---
 
@@ -52,39 +52,39 @@ Among all tested models, **Random Forest achieved the highest accuracy of 94.38%
 
 ## Individual Customer Analysis
 
-![Individual Analysis](images/individual_analysis.png)
+![Individual Analysis](assets/individual_analysis.png)
 
 ## Demographic Analysis
 
-![Demographics](images/demographics.png)
+![Demographics](assets/demographics.png)
 
 ## Churn Risk Dashboard
 
-![Risk Dashboard](images/risk_dashboard.png)
+![Risk Dashboard](assets/risk_dashboard.png)
 
 ## Recommended Actions
 
-![Recommendations](images/recommendations.png)
+![Recommendations](assets/recommendations.png)
 
 ## Batch Processing
 
-![Batch Processing](images/batch_processing.png)
+![Batch Processing](assets/batch_processing.png)
 
 ## Batch Analysis Dashboard
 
-![Batch Dashboard](images/batch_dashboard.png)
+![Batch Dashboard](assets/batch_dashboard.png)
 
 ## Feature Analysis Dashboard
 
-![Feature Dashboard](images/feature_dashboard.png)
+![Feature Dashboard](assets/feature_dashboard.png)
 
 ## Customer Distribution Analysis
 
-![Customer Distribution](images/customer_distribution.png)
+![Customer Distribution](assets/customer_distribution.png)
 
 ## Download Reports
 
-![Download Reports](images/download_reports.png)
+![Download Reports](assets/download_reports.png)
 
 ---
 
