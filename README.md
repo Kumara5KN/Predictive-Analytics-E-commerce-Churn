@@ -32,7 +32,7 @@ Features:
 
 Among all tested models, **Random Forest achieved the highest accuracy of 94.38%** on the E-commerce churn dataset.
 
-![Model Comparison](assets/model_comparison.png)
+![Churn Distribution](assets/churn_distribution.png)
 
 ---
 
