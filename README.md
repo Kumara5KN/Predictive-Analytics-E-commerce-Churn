@@ -1,7 +1,7 @@
 Project Overview 
 The Churn Intelligence system is a full-stack application designed to predict customer churn in an E-commerce business. It utilizes an advanced Ensemble Machine Learning Model on the backend to provide accurate, actionable predictions and business impact analysis, all accessible through a modern React frontend.
 
-Key Features ✨
+Key Features ✨<br>
 Advanced Prediction: Single and batch prediction capabilities using an Ensemble ML Model.
 
 Intelligent Data Preprocessing: Smart NaN imputation and automatic feature engineering.
