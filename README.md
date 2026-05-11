@@ -30,3 +30,80 @@ Features:
 ✔ Business impact analysis
 ✔ Feature importance approximation
 
+Among all tested models, **Random Forest achieved the highest accuracy of 94.38%** on the E-commerce churn dataset.
+
+![Model Comparison](images/model_comparison.png)
+
+---
+
+# 📈 Dataset Insights
+
+## Churn Distribution
+
+![Churn Distribution](images/churn_distribution.png)
+
+## Feature-wise Churn Analysis
+
+![Feature Analysis](images/feature_analysis.png)
+
+---
+
+# 🖥️ Application Screenshots
+
+## Individual Customer Analysis
+
+![Individual Analysis](images/individual_analysis.png)
+
+## Demographic Analysis
+
+![Demographics](images/demographics.png)
+
+## Churn Risk Dashboard
+
+![Risk Dashboard](images/risk_dashboard.png)
+
+## Recommended Actions
+
+![Recommendations](images/recommendations.png)
+
+## Batch Processing
+
+![Batch Processing](images/batch_processing.png)
+
+## Batch Analysis Dashboard
+
+![Batch Dashboard](images/batch_dashboard.png)
+
+## Feature Analysis Dashboard
+
+![Feature Dashboard](images/feature_dashboard.png)
+
+## Customer Distribution Analysis
+
+![Customer Distribution](images/customer_distribution.png)
+
+## Download Reports
+
+![Download Reports](images/download_reports.png)
+
+---
+
+# 🧠 Intelligent Backend Features
+
+## ✔ Smart NaN Imputation
+
+Automatically repairs missing values using:
+
+- Median / Mean
+- Mode for categorical values
+- ML-based estimation for:
+  - CashbackAmount
+  - OrderCount
+  - Tenure
+  - SatisfactionScore
+
+---
+
+## ✔ Feature Engineering
+
+Automatically creates:
