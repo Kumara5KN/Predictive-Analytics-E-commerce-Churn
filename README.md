@@ -81,24 +81,4 @@ Among all tested models, **Random Forest achieved the highest accuracy of 94.38%
 
 ![Download Reports](assets/download_reports.png)
 
----
 
-# 🧠 Intelligent Backend Features
-
-## ✔ Smart NaN Imputation
-
-Automatically repairs missing values using:
-
-- Median / Mean
-- Mode for categorical values
-- ML-based estimation for:
-  - CashbackAmount
-  - OrderCount
-  - Tenure
-  - SatisfactionScore
-
----
-
-## ✔ Feature Engineering
-
-Automatically creates:
