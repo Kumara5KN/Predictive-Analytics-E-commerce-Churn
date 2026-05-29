@@ -6,6 +6,7 @@ const Login = ({ onLogin }) => {
     username: '',
     password: ''
   });
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -19,7 +20,7 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.username || !formData.password) {
       setError('Username and password are required');
       return;
@@ -29,7 +30,10 @@ const Login = ({ onLogin }) => {
     setError('');
 
     setTimeout(() => {
-      if (formData.username === 'admin' && formData.password === 'admin123') {
+      if (
+        formData.username === 'admin' &&
+        formData.password === 'admin123'
+      ) {
         onLogin(formData.username, formData.password);
       } else {
         setError('Invalid username or password');
@@ -77,23 +81,29 @@ const Login = ({ onLogin }) => {
             </div>
           )}
 
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="login-button"
             disabled={loading}
           >
             {loading ? 'Signing In...' : 'Sign In'}
           </button>
         </form>
+
+        {/* Demo Credentials Section */}
+        <div className="demo-credentials">
+          <h3>Demo Login Credentials</h3>
+          <div className="credential-item">
+            <span className="label">Username:</span>
+            <span className="value">admin</span>
+          </div>
+          <div className="credential-item">
+            <span className="label">Password:</span>
+            <span className="value">admin123</span>
+          </div>
+        </div>
       </div>
     </div>
- <div className="demo-credentials">
-        <h4>Demo Login Credentials</h4>
-        <p><strong>Username:</strong> admin</p>
-        <p><strong>Password:</strong> admin123</p>
-      </div>
-    </div>
-  </div>
   );
 };
 
