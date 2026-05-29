@@ -228,7 +228,7 @@ function BatchDashboard({ dashboardData }) {
       formData.append('file', fileToProcess);
       formData.append('risk_level', riskLevel);
 
-      const response = await fetch('http://localhost:5000/api/batch/download-risk-customers', {
+      const response = await fetch('https://predictive-analytics-e-commerce-churn.onrender.com/api/batch/download-risk-customers', {
         method: 'POST',
         body: formData,
       });
