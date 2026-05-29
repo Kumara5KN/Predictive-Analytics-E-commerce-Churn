@@ -138,7 +138,7 @@ function BatchDashboard({ dashboardData }) {
       const formData = new FormData();
       formData.append('file', fileToProcess);
 
-      const response = await fetch('http://localhost:5000/api/batch/download-report', {
+      const response = await fetch('https://predictive-analytics-e-commerce-churn.onrender.com/api/batch/download-report', {
         method: 'POST',
         body: formData,
       });
