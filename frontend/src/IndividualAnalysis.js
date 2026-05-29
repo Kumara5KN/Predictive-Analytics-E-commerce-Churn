@@ -12,7 +12,7 @@ function IndividualAnalysis({
 }) {
   const [activeTab, setActiveTab] = useState("core");
 
-  const API_BASE_URL = "http://localhost:5000";
+  const API_BASE_URL = "https://predictive-analytics-e-commerce-churn.onrender.com/api/predict";
 
   const handleAnalyze = async () => {
     setLoading(true);
