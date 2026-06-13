@@ -47,7 +47,7 @@ Among all tested models, **Random Forest achieved the highest accuracy of 94.38%
 
 ##  Churn Analysis Report
 
-![Churn Analysis Report](assets/Churn Dashboard.png)
+![Churn Analysis Report](assets/Churn_Dashboard.png)
 
 
 
